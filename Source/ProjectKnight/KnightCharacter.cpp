@@ -1,11 +1,11 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "ProjectKnight.h"
-#include "BoxCharacter.h"
+#include "KnightCharacter.h"
 
 
 // Sets default values
-ABoxCharacter::ABoxCharacter()
+AKnightCharacter::AKnightCharacter()
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
@@ -13,21 +13,21 @@ ABoxCharacter::ABoxCharacter()
 }
 
 // Called when the game starts or when spawned
-void ABoxCharacter::BeginPlay()
+void AKnightCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 	
 }
 
 // Called every frame
-void ABoxCharacter::Tick( float DeltaTime )
+void AKnightCharacter::Tick( float DeltaTime )
 {
 	Super::Tick( DeltaTime );
 
 }
 
 // Called to bind functionality to input
-void ABoxCharacter::SetupPlayerInputComponent(class UInputComponent* InputComponent)
+void AKnightCharacter::SetupPlayerInputComponent(class UInputComponent* InputComponent)
 {
 	Super::SetupPlayerInputComponent(InputComponent);
 

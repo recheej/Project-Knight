@@ -3,16 +3,16 @@
 #pragma once
 
 #include "GameFramework/Character.h"
-#include "BoxCharacter.generated.h"
+#include "KnightCharacter.generated.h"
 
 UCLASS(Blueprintable)
-class PROJECTKNIGHT_API ABoxCharacter : public ACharacter
+class PROJECTKNIGHT_API AKnightCharacter : public ACharacter
 {
 	GENERATED_BODY()
 
 public:
 	// Sets default values for this character's properties
-	ABoxCharacter();
+	AKnightCharacter();
 
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
