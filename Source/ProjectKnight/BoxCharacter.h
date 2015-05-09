@@ -5,7 +5,7 @@
 #include "GameFramework/Character.h"
 #include "BoxCharacter.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class PROJECTKNIGHT_API ABoxCharacter : public ACharacter
 {
 	GENERATED_BODY()
