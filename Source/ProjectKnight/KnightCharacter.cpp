@@ -9,7 +9,8 @@ AKnightCharacter::AKnightCharacter()
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-	this->health = 100;
+	this->health = 1.0;
+	this->money = 0.00;
 
 }
 
@@ -32,5 +33,15 @@ void AKnightCharacter::SetupPlayerInputComponent(class UInputComponent* InputCom
 {
 	Super::SetupPlayerInputComponent(InputComponent);
 
+}
+
+FString AKnightCharacter::MoneyString()
+{
+	return FString::FromInt(this->money);
+}
+
+void AKnightCharacter::CharacterHitDeath()
+{
+	this->GetWorld()->GetAuthGameMode()->ResetLevel();
 }
 

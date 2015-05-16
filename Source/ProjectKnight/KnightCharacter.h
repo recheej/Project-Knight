@@ -24,7 +24,20 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* InputComponent) override;
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-	uint8 health;
+	float health;
 	
-	
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	float money;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	int32 chivalry;
+
+	UFUNCTION(BlueprintCallable, Category="Money")
+	FString MoneyString();
+
+
+	UFUNCTION(BlueprintCallable, Category = "Event")
+	void CharacterHitDeath();
+
+
 };
