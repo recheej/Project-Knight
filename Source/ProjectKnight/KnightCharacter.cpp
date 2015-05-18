@@ -11,7 +11,6 @@ AKnightCharacter::AKnightCharacter()
 	PrimaryActorTick.bCanEverTick = true;
 	this->health = 1.0;
 	this->money = 0.00;
-
 }
 
 // Called when the game starts or when spawned
@@ -35,13 +34,13 @@ void AKnightCharacter::SetupPlayerInputComponent(class UInputComponent* InputCom
 
 }
 
-FString AKnightCharacter::MoneyString()
+FString AKnightCharacter::MoneyString() const
 {
 	return FString::FromInt(this->money);
 }
 
-void AKnightCharacter::CharacterHitDeath()
+void AKnightCharacter::Respawn()
 {
-	this->GetWorld()->GetAuthGameMode()->ResetLevel();
+	this->Reset();
 }
 

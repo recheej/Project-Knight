@@ -33,11 +33,9 @@ public:
 	int32 chivalry;
 
 	UFUNCTION(BlueprintCallable, Category="Money")
-	FString MoneyString();
+	FString MoneyString() const;
 
-
-	UFUNCTION(BlueprintCallable, Category = "Event")
-	void CharacterHitDeath();
-
+	UFUNCTION(BlueprintCallable, Category = "Respawn")
+	void Respawn();
 
 };
