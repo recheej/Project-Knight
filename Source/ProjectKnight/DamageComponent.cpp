@@ -6,7 +6,7 @@
 
 
 
-UDamageComponent::UDamageComponent(int32 health)
+UDamageComponent::UDamageComponent(float health)
 {
 	this->health = health;
 }
@@ -46,12 +46,12 @@ void UDamageComponent::SetDamageSustained(int32 val)
 	this->damageSustained = val;
 }
 
-int32 UDamageComponent::GetHealth() const
+float UDamageComponent::GetHealth() const
 {
 	return this->health;
 }
 
-void UDamageComponent::SetHeatlh(int32 health)
+void UDamageComponent::SetHeatlh(float health)
 {
 	this->health = health;
 }

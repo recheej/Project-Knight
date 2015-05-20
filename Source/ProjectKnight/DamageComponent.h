@@ -8,13 +8,14 @@
 /**
  * 
  */
-UCLASS()
+UCLASS(Blueprintable)
 class PROJECTKNIGHT_API UDamageComponent : public UObject
 {
 	GENERATED_BODY()
+public:
 
 	UDamageComponent();
-	UDamageComponent(int32 health);
+	UDamageComponent(float health);
 
 	UFUNCTION(BlueprintCallable, Category = "Damage")
 	void SetRegularDamageGiven(int32 val);
@@ -34,18 +35,18 @@ class PROJECTKNIGHT_API UDamageComponent : public UObject
 	UFUNCTION(BlueprintCallable, Category = "Damage")
 	void SetDamageSustained(int32 val);
 
-	UFUNCTION(BlueprintCallable, Category = "Damage")
-	int32 GetHealth() const;
+	UFUNCTION(BlueprintCallable, Category = "Damage", Exec)
+	float GetHealth() const;
 
 	UFUNCTION(BlueprintCallable, Category = "Damage")
-	void SetHeatlh(int32 health);
+	void SetHeatlh(float health);
 
 	UFUNCTION(BlueprintCallable, Category = "Damage")
 	void DamageActor();
 	
 private:
 
-	int32 health;
+	float health;
 	int32 regularDamageGiven;
 	int32 powerfulDamageGiven;
 	int32 damageSustained;

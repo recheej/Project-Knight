@@ -2,6 +2,7 @@
 
 #pragma once
 
+#include "DamageComponent.h"
 #include "GameFramework/Character.h"
 #include "KnightCharacter.generated.h"
 
@@ -32,5 +33,8 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category="Money")
 	FString MoneyString() const;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Category="Components")
+	UDamageComponent *damageComponent;
 
 };

@@ -9,20 +9,23 @@ AKnightCharacter::AKnightCharacter()
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-	this->money = 0.00;
+	this->money = 22.00;
 	
-	/*
-	this->damageComponent = ConstructObject<UDamageComponent>(UDamageComponent::StaticClass());
-	this->damageComponent->SetDamageSustained(100);
-	this->damageComponent->SetRegularDamageGiven(100);
-	this->damageComponent->SetPowerfulDamageGiven(100);
-	*/
+	
+
+	
 }
 
 // Called when the game starts or when spawned
 void AKnightCharacter::BeginPlay()
 {
 	Super::BeginPlay();
+
+	this->damageComponent = ConstructObject<UDamageComponent>(UDamageComponent::StaticClass());
+	this->damageComponent->SetHeatlh(1.0);
+	this->damageComponent->SetDamageSustained(100);
+	this->damageComponent->SetRegularDamageGiven(100);
+	this->damageComponent->SetPowerfulDamageGiven(100);
 	
 }
 
