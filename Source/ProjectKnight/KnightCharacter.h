@@ -5,6 +5,7 @@
 #include "GameFramework/Character.h"
 #include "KnightCharacter.generated.h"
 
+
 UCLASS(Blueprintable)
 class PROJECTKNIGHT_API AKnightCharacter : public ACharacter
 {
@@ -24,9 +25,6 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* InputComponent) override;
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-	float health;
-	
-	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	float money;
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
@@ -34,8 +32,5 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category="Money")
 	FString MoneyString() const;
-
-	UFUNCTION(BlueprintCallable, Category = "Respawn")
-	void Respawn();
 
 };
