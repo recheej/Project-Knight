@@ -43,6 +43,21 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "Damage")
 	void DamageActor();
+
+	
+	UFUNCTION(BlueprintCallable, Category = "Damage")
+	//************************************
+	// Returns the current attack speed. They are in increments of .-5
+	// Method:    GetAttackSpeed
+	// FullName:  UDamageComponent::GetAttackSpeed
+	// Access:    public 
+	// Returns:   float
+	// Qualifier: const
+	//************************************
+	float GetAttackSpeed() const;
+
+	UFUNCTION(BlueprintCallable, Category = "Damage")
+	void SetAttackSpeed(float val);
 	
 private:
 
@@ -50,6 +65,9 @@ private:
 	int32 regularDamageGiven;
 	int32 powerfulDamageGiven;
 	int32 damageSustained;
-	
+
+	float attackSpeed;
+
+
 	
 };

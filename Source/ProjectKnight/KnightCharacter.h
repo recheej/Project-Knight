@@ -37,4 +37,12 @@ public:
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Category="Components")
 	UDamageComponent *damageComponent;
 
+	int32 GetKnockBack();
+
+	void SetKnockBack(int val);
+
+private:
+
+	int32 knockBack;
+
 };

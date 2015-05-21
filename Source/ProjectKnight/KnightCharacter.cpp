@@ -47,3 +47,13 @@ FString AKnightCharacter::MoneyString() const
 {
 	return FString::FromInt(this->money);
 }
+
+int32 AKnightCharacter::GetKnockBack()
+{
+	return this->knockBack;
+}
+
+void AKnightCharacter::SetKnockBack(int val)
+{
+	this->knockBack = val;
+}

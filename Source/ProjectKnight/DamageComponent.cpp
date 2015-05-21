@@ -60,3 +60,13 @@ void UDamageComponent::DamageActor()
 {
 	this->health -= damageSustained;
 }
+
+float UDamageComponent::GetAttackSpeed() const
+{
+	return this->attackSpeed;
+}
+
+void UDamageComponent::SetAttackSpeed(float val)
+{
+	this->attackSpeed = val;
+}
